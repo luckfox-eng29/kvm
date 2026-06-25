@@ -202,6 +202,8 @@ func rpcReinitializeUsbGadget() error {
 		}
 	}
 
+	gadget.CloseHidFiles()
+
 	// Recreate the gadget instance similar to program restart
 	gadget = usbgadget.NewUsbGadget(
 		"kvm",
